@@ -86,6 +86,7 @@ let
 in
 poetry2nix.mkPoetryApplication rec {
   pname = "empire";
+  version = "5.1.2";
   inherit src;
   projectDir = "${src}";
   python = python310;

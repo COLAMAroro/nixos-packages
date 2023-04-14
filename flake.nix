@@ -35,15 +35,5 @@
           cppfront-test = pkgs.callPackage ./custom-packages/cppfront-test { cppfront = self.packages.x86_64-linux.cppfront; };
           carbon = pkgs.callPackage ./custom-packages/carbon { };
         };
-      apps.x86_64-linux = rec {
-        binary-ninja = self.lib.mkApp self.packages.x86_64-linux.binary-ninja;
-        binja = binary-ninja;
-        pulsar = self.lib.mkApp self.packages.x86_64-linux.pulsar;
-        tetris-cli = self.lib.mkApp self.packages.x86_64-linux.tetris-cli;
-        empire = self.lib.mkApp self.packages.x86_64-linux.empire;
-        cppfront = self.lib.mkApp self.packages.x86_64-linux.cppfront;
-        cppfront-test = self.lib.mkApp self.packages.x86_64-linux.cppfront-test;
-        carbon = self.lib.mkApp self.packages.x86_64-linux.carbon;
-      };
     };
 }

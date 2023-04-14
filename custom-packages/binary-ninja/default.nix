@@ -15,7 +15,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  pname = "BinaryNinja-personal";
+  pname = "binaryninja-personal";
   version = "3.3.3996";
 
   src = requireFile {
@@ -74,5 +74,6 @@ stdenv.mkDerivation rec {
     homepage = "https://binary.ninja/";
     license = licenses.unfree;
     maintainers = with maintainers; [ ];
+    mainProgram = "binaryninja";
   };
 }

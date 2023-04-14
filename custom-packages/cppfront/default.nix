@@ -37,6 +37,5 @@ stdenv.mkDerivation {
   meta = {
     homepage = "https://github.com/hsutter/cppfront";
     license = cc-by-nc-nd-40;
-    mainProgram = "cppfront";
   };
 }

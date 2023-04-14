@@ -6,6 +6,7 @@
 
 stdenv.mkDerivation {
   pname = "tetris-cli";
+  version = "unstable-2020-01-23";
   src = fetchFromGitHub {
     owner = "S1M0N38";
     repo = "tetris";
