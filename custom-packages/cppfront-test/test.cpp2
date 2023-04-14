@@ -1,0 +1,9 @@
+//  "A better C than C" ... ?
+//
+main: (args) -> int = {
+    s: std::string = "World";
+    if (args.argc > 1) {
+        s = args.argv[1];
+    }
+    std::cout << "Hello " << s << " !" << std::endl;
+}
