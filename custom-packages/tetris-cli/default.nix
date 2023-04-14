@@ -5,7 +5,7 @@
 }:
 
 stdenv.mkDerivation {
-  name = "tetris-cli";
+  pname = "tetris-cli";
   src = fetchFromGitHub {
     owner = "S1M0N38";
     repo = "tetris";

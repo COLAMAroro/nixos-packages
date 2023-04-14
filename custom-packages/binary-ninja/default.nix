@@ -15,7 +15,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  name = "BinaryNinja-personal";
+  pname = "BinaryNinja-personal";
   version = "3.3.3996";
 
   src = requireFile {
@@ -24,8 +24,8 @@ stdenv.mkDerivation rec {
     message = ''
       Binary Ninja is not free software, and I cannot redistribute it.
       Get a download link with your licenced email at https://binary.ninja/recover/
-      Rename your file to ${name}-${version}.zip and put it in the nix store via
-      nix-prefetch-url file://$PWD/${name}-${version}.zip
+      Rename your file to ${pname}-${version}.zip and put it in the nix store via
+      nix-prefetch-url file://$PWD/${pname}-${version}.zip
     '';
   };
 

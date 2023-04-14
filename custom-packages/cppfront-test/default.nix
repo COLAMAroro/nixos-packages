@@ -4,7 +4,7 @@
 }:
 
 stdenv.mkDerivation {
-  name = "cppfront-test";
+  pname = "cppfront-test";
   src = ./.;
 
   buildInputs = [ cppfront ];

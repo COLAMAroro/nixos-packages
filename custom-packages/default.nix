@@ -8,4 +8,5 @@ final: prev: rec {
   empire = final.callPackage ./empire { };
   cppfront = final.callPackage ./cppfront { };
   cppfront-test = final.callPackage ./cppfront-test { inherit cppfront; };
+  carbon = final.callPackage ./carbon { };
 }
