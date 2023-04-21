@@ -34,6 +34,7 @@
           cppfront = pkgs.callPackage ./custom-packages/cppfront { };
           cppfront-test = pkgs.callPackage ./custom-packages/cppfront-test { cppfront = self.packages.x86_64-linux.cppfront; };
           carbon = pkgs.callPackage ./custom-packages/carbon { };
+          wclip = pkgs.callPackage ./custom-packages/wclip { };
         };
     };
 }

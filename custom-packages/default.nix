@@ -9,4 +9,5 @@ final: prev: rec {
   cppfront = final.callPackage ./cppfront { };
   cppfront-test = final.callPackage ./cppfront-test { inherit cppfront; };
   carbon = final.callPackage ./carbon { };
+  wclip = final.callPackage ./wclip { };
 }
