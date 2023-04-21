@@ -20,7 +20,7 @@
         };
       };
       packages.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in
-        rec {
+        {
           binary-ninja = pkgs.qt6Packages.callPackage ./custom-packages/binary-ninja { };
           pulsar = pkgs.callPackage ./custom-packages/pulsar { };
           pulsar-french = self.packages.x86_64-linux.pulsar.override {
@@ -35,6 +35,19 @@
           cppfront-test = pkgs.callPackage ./custom-packages/cppfront-test { cppfront = self.packages.x86_64-linux.cppfront; };
           carbon = pkgs.callPackage ./custom-packages/carbon { };
           wclip = pkgs.callPackage ./custom-packages/wclip { };
+          guacamole.server = pkgs.callPackage ./custom-packages/guacamole/server {
+            withGuacenc = true;
+            withRDP = true;
+            withVNC = true;
+            withPulseAudio = true;
+            withTelnet = true;
+            withSSH = true;
+            withKubernetes = true;
+            withSSL = true;
+            withVorbis = true;
+            withWebp = true;
+          };
+          guacamole.client = pkgs.callPackage ./custom-packages/guacamole/client { };
         };
     };
 }
