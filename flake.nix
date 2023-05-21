@@ -48,6 +48,7 @@
             withWebp = true;
           };
           guacamole.client = pkgs.callPackage ./custom-packages/guacamole/client { };
+          lcc = pkgs.callPackage ./custom-packages/lcc { };
         };
     };
 }
