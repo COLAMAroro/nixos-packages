@@ -50,5 +50,11 @@
           guacamole.client = pkgs.callPackage ./custom-packages/guacamole/client { };
           lcc = pkgs.callPackage ./custom-packages/lcc { };
         };
+      devShells.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in
+        {
+          python = {
+            gkeepapi = (import ./gkeepapi.nix { inherit pkgs; });
+          };
+        };
     };
 }
